@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+// 外部变量声明，只能在声明时赋值或者不赋值
+
+void someFunction() {
+// 局部变量声明，先集中声明再集中操作
+int localVar1, localVar2;
+
+// 此处不允许声明和操作混杂
+
+localVar1 = 10;
+localVar2 = localVar1 + 20;
+
+}
+
+int main() {
+// 一维数组声明，[]内必须有数字，不能有其他数组操作
+int array[5];
+int i;
+
+// 常量类型声明，不包括long long, unsigned long, unsigned short
+int constVar1 = 10;
+ int constVar2 = 20;
+
+// 赋值的变量和常量必须是完全同一类型
+int assignedVar = constVar1; // 合法
+for (i = 0; i < 5; i = 1) {
+    i = i * 2;
+}
+
+
+
+
+someFunction();
+
+return 0;
+}
