@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/DSEA2.dir/main.cpp.o CMakeFiles/DSEA2.dir/lexer.cpp.o CMakeFiles/DSEA2.dir/parser.cpp.o CMakeFiles/DSEA2.dir/preprocess.cpp.o CMakeFiles/DSEA2.dir/printfile.cpp.o CMakeFiles/DSEA2.dir/profunction.cpp.o CMakeFiles/DSEA2.dir/SymbolTable.cpp.o -o DSEA2 

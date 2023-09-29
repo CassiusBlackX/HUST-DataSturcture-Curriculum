@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+// 函数声明
+int multiply(int a, int b);
+int add(int a, int b);
+
+int add(int a, int b) {
+return a + b;
+}
+
+int multiply(int a, int b) {
+return a * b;
+}
+
+
+int main() {
+int x = 5;
+int y = 3;
+
+int product = multiply(x, y);
+product = add(x,y);
+/*
+
+
+*/
+
+return 0;
+} // 行注释
+
+// 函数定义

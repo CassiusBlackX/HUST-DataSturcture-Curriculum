@@ -1,0 +1,11 @@
+#define OK 1
+int b[30];
+double c;
+char string_S1;
+double func(int a, double b)
+{
+char c;
+int group[30];
+return b;
+}
+float i;
