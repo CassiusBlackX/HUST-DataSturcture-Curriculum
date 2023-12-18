@@ -44,15 +44,15 @@ int main(){
     int error_line[100] = {-1}; // 记录错误行数
     int error_line_num = 0; // 记录错误总个数
 Choosefile:
-    system("clear");
+    system("cls");
     printf("input the name of the file\n");
     filename = "../test/file2.txt";
-//    cin>>filename;
+    cin>>filename;
     fp.open(filename);
     if(!fp.is_open()){
         printf("\ncannot open the file,choose again");
         system("pause");
-        system("clear");
+        system("cls");
         getchar();
         getchar();
         goto Choosefile;
@@ -63,7 +63,7 @@ Choosefile:
         printf("1. Lexical Analysis\n2. Syntax Analysis\n3. Indentation Formatting\n4. Select File\n0. Exit Program\nPlease choose:\n");
         cin >> choice;
 //        choice = 1;
-        system("clear");
+        system("cls");
         switch(choice){
             case 1:
                 error_line_num = 0;
@@ -88,7 +88,7 @@ Choosefile:
                 }
                 mid_fp.open("../output/C_mid_file.txt");
                 line_num = 1;
-                system("clear");
+                system("cls");
                 printf("\n");
                 printf("\tToken Type\t\t\tToken Value\n");
                 while(!mid_fp.eof()){
@@ -223,7 +223,7 @@ Choosefile:
                 }
                 mid_fp.open("../output/C_mid_file.txt");
                 line_num = 1;
-                system("clear");
+                system("cls");
                 if(!program(mid_fp,T)){
                     printf("errors occur! error line:%d\n",line_num);
                     printf("press here to continue...\n");

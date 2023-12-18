@@ -1,0 +1,97 @@
+
+
+
+
+int externInt ; 
+double externDouble = .23 ; 
+int arr [ 30 ] ; 
+int func1 ( int x , int y ) ; 
+
+
+
+
+
+
+int func1 ( int x , int y ) { 
+long vector [ 30 ] ; 
+x = y 1 ; 
+x > y ; 
+return y ; 
+} 
+float func2 ( long m , float n ) { 
+int l = 654321 ; 
+l = func1 ( 12 , 13 ) ; 
+
+
+m = 31415926l ; 
+
+
+return n 3.1415926f ; 
+} 
+int main ( ) { 
+int localInt ; 
+int a ; 
+int b ; 
+char c ; 
+func1 ( localInt , externInt ) ; 
+
+
+for ( localInt = 1 ; localInt <= 100 ; localInt = localInt 1 ) { 
+while ( a < b ) { 
+if ( a >= b ) { 
+a = b ; 
+} else { 
+a != b ; 
+break ; 
+} 
+} 
+if ( a == OK ) { 
+
+
+a = 0x679df ; 
+b = 0567 ; 
+
+
+if ( b != ERROR ) { 
+c = '$' ; 
+
+
+} 
+continue ; 
+} 
+return 0 ; 
+} 
+} 
+
+void consType ( ) { 
+654u ; 
+123456789456ul ; 
+123456789l ; 
+3.14f ; 
+3.14 ; 
+3.14l ; 
+1e9 ; 
+3.14e-10 ; 
+2.28e5 ; 
+.234567 ; 
+.3456789f ; 
+-2 ; 
+'c' ; 
+'@' ; 
+'\t' ; 
+'\n' ; 
+'\'' ; 
+'\\' ; 
+'\2' ; 
+' ' ; 
+
+
+
+
+
+
+
+
+
+
+} 
