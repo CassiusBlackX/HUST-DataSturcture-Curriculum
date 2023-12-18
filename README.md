@@ -1,6 +1,6 @@
 # Programming Comprehensive Course Design of HUST.ComputerScience
 ## 说明
-这是华中科技大学2022级程序设计综合课设选题二的源码。因为使用的IDE是CLion，所以会有cmkae-build-debug和CMakeLists.txt。
+这是华中科技大学2022级程序设计综合课设选题二的源码。因为使用的IDE是CLion，所以会有cmake-build-debug和CMakeLists.txt。
 
 ## 目录结构
 - include文件夹下是整个项目所有需要的头文件。
