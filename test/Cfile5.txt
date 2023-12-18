@@ -1,8 +1,0 @@
-"abc\ndef"
-"abc\
-def"
-int x;
-x = @;
-x = $;
-"abc\tdef"
-"abc\   def"

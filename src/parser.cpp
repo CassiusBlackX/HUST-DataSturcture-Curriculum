@@ -1,7 +1,3 @@
-//
-// Created by 张奥林 on 2023/8/25.
-//
-
 #include "parser.h"
 using namespace std;
 int w; // 获得gettoken函数的返回值即读入的单词种类编码

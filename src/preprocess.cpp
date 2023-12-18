@@ -1,6 +1,3 @@
-//
-// Created by 张奥林 on 2023/8/25.
-//
 #include "preprocess.h"
 #include "lexer.h"
 define_data data_Def[10]; // 用于存储define宏定义的内容

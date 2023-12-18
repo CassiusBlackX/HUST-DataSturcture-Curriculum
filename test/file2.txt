@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 #include "stdlib.h"
 #define OK 1
 #define ERROR -2
@@ -10,28 +10,32 @@ int func1(int x, int y); // line note
 /*
 block note
 */
-// 检查函数定义与函数声明不匹配 int func1(char x, int y){
+// 检查函数定义与函数声明不匹配
+// int func1(char x, int y){
 int func1(int x, int y){
 long vector[30];
-x=y+1;
-x > y;
+x = y+1;
+x>y;
 return y;
 }
 float func2(long m, float n){
-int l = 654321;
-l = func1(12,13);
-// 检查函数调用时候与赋值对象不匹配 short s = func1(12,13);
+int l=654321;
+l=func1(12,13);
+// 检查函数调用时与赋值对象不匹配
+// short s = func1(12,13);
 m = 31415926l;
+// 检查返回值与函数声明不匹配
+// return 3.14d
 return n+3.1415926f;
-// 检查返回值与函数声明不匹配 return 3.14d;
 }
 int main(){
 int localInt;
 int a; // 也可以检查变量有没有声明过
 int b;
 char c;
-func1(localInt,externInt);
-// 检查参数调用的时候传入参数与函数声明不匹配 func1(localInt,c);
+func1(localInt, externInt);
+// 检查参数调用的时候传入参数与函数声明不匹配
+// func1(localInt, c);
 for(localInt=1;localInt<=100;localInt=localInt+1){
 while(a<b){
 if(a>=b){
@@ -42,28 +46,26 @@ break;
 }
 }
 if(a==OK){
-// 检查宏定义与赋值对象类型不匹配 c = OK;
-
-a=0x123ab;
-// 检查十六进制错误
+// 检查宏定义与复制对象类型不匹配
+// c=OK;
 a = 0x679df;
 b = 0567;
 // 检查八进制错误
-b = 0567;
+// b=056789;
 if(b!=ERROR){
 c = '$';
-// 检查字符，也可以检查特殊符号 c='$
- // 也可以检查大括号不匹配
+// 检查字符，也可以检查特殊符号
+// 也可以检查大括号不匹配
 }
 continue;
 }
 return 0;
 }
+}
 
-
-void constType(){
+void consType(){
 654u;
-12345667891234567890ul;
+123456789456ul;
 123456789l;
 3.14f;
 3.14;
@@ -82,11 +84,14 @@ void constType(){
 '\\';
 '\2';
 ' ';
+// 因为字符串属于数组类型，因此在语法检查的时候不能检查以下部分
+/*
 "hello";
 "abc_def";
 "abc\
 abc";
 "";
-"  ";
+" ";
 "\abcabc\"";
+*/
 }

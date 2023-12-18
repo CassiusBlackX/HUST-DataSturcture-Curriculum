@@ -1,7 +1,3 @@
-//
-// Created by 张奥林 on 2023/8/25.
-//
-
 #include "printfile.h"
 status PrintFile(ifstream & fp){
     int indentnum = 0,line = 1;

@@ -1,7 +1,3 @@
-//
-// Created by 张奥林 on 2023/8/25.
-//
-
 #include "profunction.h"
 // 树的相关函数
 /*

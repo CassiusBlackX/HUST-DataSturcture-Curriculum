@@ -3,4 +3,6 @@ project(DSEA2)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(DSEA2 main.cpp lexer.cpp parser.cpp preprocess.cpp printfile.cpp profunction.cpp SymbolTable.cpp)
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+add_executable(DSEA2 main.cpp src/lexer.cpp src/parser.cpp src/preprocess.cpp src/printfile.cpp src/profunction.cpp src/SymbolTable.cpp)

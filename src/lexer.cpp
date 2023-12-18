@@ -1,7 +1,3 @@
-//
-// Created by 张奥林 on 2023/8/25.
-//
-
 #include "lexer.h"
 using namespace std;
 int line_num = 1;
