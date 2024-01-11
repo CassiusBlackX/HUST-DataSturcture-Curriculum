@@ -3,6 +3,7 @@
 #include "preprocess.h"
 #include "profunction.h"
 #include "printfile.h"
+#include <filesystem>
 
 /*
  * 新语法限定：
@@ -32,6 +33,24 @@
  *  13. 不会作用域判断
  */
 using namespace std;
+bool createDirectory(const string& path, bool exist_ok=true){
+    namespace fs = filesystem;
+    try{
+        if (fs::exists(path)){
+            if(!exist_ok){
+                cerr<<"Error: directory already exists."<<endl;
+                return false;
+            }
+        } else{ 
+            fs::create_directories(path);
+        }
+        cout<<"directory "<<path<<" created successfully."<<endl;
+        return true;
+    }catch(const exception&e){
+        cerr<<"Error: "<<e.what()<<endl;
+        return false;
+    }
+}
 int main(){
     string filename;
     int choice = 1;
@@ -47,7 +66,7 @@ Choosefile:
     system("cls");
     printf("input the name of the file\n");
     filename = "../test/file2.txt";
-    cin>>filename;
+    // cin>>filename;
     fp.open(filename);
     if(!fp.is_open()){
         printf("\ncannot open the file,choose again");
@@ -58,6 +77,11 @@ Choosefile:
         goto Choosefile;
     }
     else fp.close();
+    string path = "../output";
+    if (!createDirectory(path)){
+        cout<<"failed to create the crucial directory output. if want the program to work, please mannually create a dir named 'output' at the project root"<<endl;
+        return 1;
+    }
     while(choice){
         printf("Menu of Advanced Language Source Code Processing Tool\n");
         printf("1. Lexical Analysis\n2. Syntax Analysis\n3. Indentation Formatting\n4. Select File\n0. Exit Program\nPlease choose:\n");
