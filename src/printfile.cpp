@@ -4,6 +4,10 @@ status PrintFile(ifstream & fp){
     char c;
     string filename = "../output/C_print_file.txt";
     ofstream print_fp(filename);
+    if(!print_fp.is_open()){
+        cerr<<"Error: the "<<filename<<" cannot be created!"<<endl;
+        return ERROR;
+    }
     while(!printList.empty()){
         indentnum = printList.front().indent;
         printList.pop();

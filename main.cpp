@@ -43,8 +43,8 @@ bool createDirectory(const string& path, bool exist_ok=true){
             }
         } else{ 
             fs::create_directories(path);
+            cout<<"directory "<<path<<" created successfully."<<endl;
         }
-        cout<<"directory "<<path<<" created successfully."<<endl;
         return true;
     }catch(const exception&e){
         cerr<<"Error: "<<e.what()<<endl;
@@ -66,7 +66,7 @@ Choosefile:
     system("cls");
     printf("input the name of the file\n");
     filename = "../test/file2.txt";
-    // cin>>filename;
+    cin>>filename;
     fp.open(filename);
     if(!fp.is_open()){
         printf("\ncannot open the file,choose again");

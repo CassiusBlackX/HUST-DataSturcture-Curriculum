@@ -14,6 +14,10 @@ status preProcess(ifstream & fp){
     bool flag = false; // 判断语句中是否出现过define定义
     string filename = "../output/C_mid_file.txt" ;// 中间文件
     ofstream mid_fp(filename);
+    if (!mid_fp.is_open()){
+        cerr<<"Error: the "<<filename<<" cannot be opened. unable to write the middle file!"<<endl;
+        return ERROR;
+    }
     w = getToken(fp);
     do {
         if(w==POUND){

@@ -33,4 +33,5 @@
 
 cmake-build-debug/
 .idea/
-.vscode/settings.json
+.vscode/
+.build/
